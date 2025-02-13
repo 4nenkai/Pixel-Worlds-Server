@@ -278,7 +278,7 @@ public class EventHandler
             return false;
         }
 
-        return Regex.IsMatch(playerName.ToUpper(), "^([][A-Z_^{}][][A-Z_0-9^{}-]+)$");
+        return Regex.IsMatch(playerName.ToUpper(), "^(?=.*[A-Z])[A-Z0-9_]+$");
     }
 
     [Event(NetStrings.RENAME_PLAYER_KEY)]
